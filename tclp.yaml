@@ -1,0 +1,13 @@
+app:
+  name: act_http
+  description: TCL web server build on top boost beast
+  testdir: ./test
+
+build:
+  cmds:
+    - ./act vcpkg setup || true
+    - ./act build manifest.txt
+  tm:
+    file: build/http-0.1.tm
+    dir: act
+
